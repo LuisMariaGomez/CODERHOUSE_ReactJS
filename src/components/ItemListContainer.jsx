@@ -1,10 +1,24 @@
 import './ComponentsStyles/ComponentsCss.css'
+import Item from './item';
+import { useEffect, useState } from 'react';
+import getProducts from '../data/mockAPI.js';
 
-export default function Navbar({Saludo, Descripcion}){
+
+
+export default function itemListContainer(){
+    const [prod, setProd] = useState([]);
+    useEffect(() => {
+        const ProductsDataPromise = getProducts();
+        ProductsDataPromise.then((data) => {
+            setProd(data);
+        });
+    }, []);
+
     return(
         <div className='itemListContainer'>
-            <h1>{Saludo}</h1>
-            <h2>{Descripcion}</h2>
+            {
+                prod.map((item) => { return <Item key={item.id} item={item}></Item>})
+            }
         </div>
     )
 }
