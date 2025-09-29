@@ -1,4 +1,5 @@
 import './ComponentsStyles/ComponentsCss.css'
+import {Link} from 'react-router';
 function Item({item}){
     return(
         <div className="itemCard">
@@ -11,6 +12,9 @@ function Item({item}){
                 <p className="itemDescription">Descripción: {item.descripcion}</p>
                 <p className="itemStock">Stock: {item.stock}</p>
             </div>
+            <Link to={`/detalle/${item.id}`}>
+                <button className="itemButton">Detalles</button>
+            </Link>
         </div>
     )
 }

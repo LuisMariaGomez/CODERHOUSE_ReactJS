@@ -1,5 +1,7 @@
+main{
+    height: 100%;
+}
 header{
-    position: fixed;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -56,13 +58,13 @@ nav ul{
     font-size: 1.3em;
 }
 
-nav ul li a{
+.navLinks{
     cursor: pointer;
     text-decoration: none;
     color: white;
     transition: 100ms ease-in-out;
 }
-nav ul li a:hover{
+.navLinks:hover{
     color: rgb(255, 107, 107);
     transition: 100ms ease-in-out;
 }

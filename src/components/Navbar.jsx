@@ -1,25 +1,25 @@
 import './ComponentsStyles/ComponentsCss.css'
 import logo from "../assets/logo.png";
 import CartWidget from './CartWidget';
+import { Link } from 'react-router';
 
 export default function Navbar(){
     return(
         <header>    
             <div className='logoDiv'>
-                <a href='#'><img className="logo" src={logo} alt="LogoPagina"></img></a>
+                <Link to='/'><img className="logo" src={logo} alt="LogoPagina"></img></Link>
                 <div>
                     <p>White Tail</p>
                     <p>Archery Shop</p>
                 </div>
             </div>
             <nav>
-                <ul>
-                    <li><a href="">Arcos</a></li>
-                    <li><a href="">Flechas</a></li>
-                    <li><a href="">Accesorios</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
+            <ul>
+                <li><Link className='navLinks' to="/marca/PSE">PSE</Link></li>
+                <li><Link className='navLinks' to="/marca/Bear">Bear</Link></li>
+                <li><Link className='navLinks' to="/marca/Hoyt">Hoyt</Link></li>
+                <li><Link className='navLinks' to="/marca/Mathews">MATHEWS</Link></li>
+            </ul>
             </nav>
             <CartWidget/>
         </header>

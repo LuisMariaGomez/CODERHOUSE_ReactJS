@@ -1,0 +1,11 @@
+.itemDetailContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.itemDetailImage{
+    margin-right: 5rem;
+    height: 40rem;
+}
