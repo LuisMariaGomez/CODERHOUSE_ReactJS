@@ -17,7 +17,7 @@ function ItemDetailContainer(){
     return(
         <div className="itemDetailContainer">
             <img className="itemDetailImage" src={producto.img} alt={producto.nombre}/>
-            <div>
+            <div className="itemDetailDescription">
                 <h2>{producto.nombre}</h2>
                 <h3>Precio: ${producto.precio}</h3>
                 <h3>Marca: {producto.marca}</h3>

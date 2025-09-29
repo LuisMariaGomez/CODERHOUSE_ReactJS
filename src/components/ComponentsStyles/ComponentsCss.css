@@ -81,7 +81,7 @@ nav ul{
     gap: 2rem;
 }
 
-/* Card List */
+/* Item */
 .itemImage{
     height: 25rem;
     margin-bottom: 2rem;
@@ -112,4 +112,16 @@ nav ul{
 }
 .itemDetails p {
     margin: 0;
+}
+
+.itemButton{
+    margin-top: 2rem;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
