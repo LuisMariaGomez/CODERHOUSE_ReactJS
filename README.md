@@ -95,8 +95,6 @@ Se crean con la función createOrder(orderData) que almacena la compra en la col
 
 - Filtrado avanzado y búsqueda de productos.
 
-- Persistencia del carrito en localStorage.
-
 - Integración con pasarela de pagos (MercadoPago / Stripe).
 
 - Diseño responsive con Tailwind o Material UI.
