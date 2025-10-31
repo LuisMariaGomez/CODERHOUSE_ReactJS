@@ -39,12 +39,12 @@ Muestra información completa de un producto usando getProductById(id).
 
 **Carrito de compras (Context API)**
 
-Agregar productos: agregarAlCarrito(item, quantity)
-Eliminar producto: removeItem(id)
-Vaciar carrito: clearCart()
-Contador de items: countCartItems()
-Total a pagar: totalPrice()
-Estado global administrado con createContext y useState.
+- Agregar productos: agregarAlCarrito(item, quantity)
+- Eliminar producto: removeItem(id)
+- Vaciar carrito: clearCart()
+- Contador de items: countCartItems()
+- Total a pagar: totalPrice()
+- Estado global administrado con createContext y useState.
 
 **Órdenes en Firestore**
 
