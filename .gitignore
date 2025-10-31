@@ -1,0 +1,65 @@
+# ───────────────────────────────
+# ⚛️ React / Node / Vite
+# ───────────────────────────────
+
+# Dependencias
+node_modules/
+
+# Builds y distribuciones
+dist/
+build/
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor y sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de entorno y configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+*.orig
+*.rej
+
+# Cobertura de tests
+coverage/
+*.lcov
+
+# Archivos de cache
+.cache/
+.eslintcache
+.parcel-cache/
+vite.config.timestamp-*.json
+.vite/
+
+# Archivos de Firebase y configuraciones sensibles
+firebase-debug.log
+.firebaserc.local
+
+# Archivos de lock alternativos
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Sistema operativo
+ehthumbs.db
+Icon?
+Desktop.ini

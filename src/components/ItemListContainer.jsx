@@ -1,21 +1,20 @@
 import './ComponentsStyles/ComponentsCss.css'
 import Item from './item';
 import { useEffect, useState } from 'react';
-import getProducts from '../data/mockAPI.js';
+import { getProducts, getProductsByMarca } from '../data/firebase.js';
 import { useParams } from 'react-router';
-import { getProductsByMarca } from '../data/mockAPI.js';
 
 export default function itemListContainer(){
     const [prod, setProd] = useState([]);
     const {marcaParam} = useParams();
-    console.log(marcaParam);
+    // console.log(marcaParam);
 
     useEffect(() => {
         if(marcaParam === undefined){
             const ProductsDataPromise = getProducts();
             ProductsDataPromise.then((data) => {
                 setProd(data);
-            });
+            }).catch((error) => alert(`Error:  ${error}`));
         } else {
             const ProductsByMarcaPromise = getProductsByMarca(marcaParam);
             ProductsByMarcaPromise.then((data) => {

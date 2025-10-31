@@ -1,12 +1,112 @@
-# React + Vite
+<h1 align="center"> White Tail Archery Shop </h1> <br>
+<p align="center">
+  <a href="">
+    <img alt="GitPoint" title="GitPoint" src="https://i.postimg.cc/T3yNRTRy/logo.png/" width="250">
+  </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>
+  White Tail Archery Shop es una aplicación web desarrollada con React.js que simula una tienda online de arcos compuestos.
+Permite explorar productos por marca, ver detalles individuales, agregar ítems al carrito y generar órdenes de compra que se almacenan en Firebase Firestore.
+</p>
 
-Currently, two official plugins are available:
+## Tecnologias-Libreras
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js → Framework base del proyecto.
 
-## Expanding the ESLint configuration
+- Vite → Bundler para desarrollo rápido y eficiente.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React Router DOM → Navegación entre vistas y rutas dinámicas (/marca/:marca, /item/:id, /cart).
+
+- Firebase Firestore → Base de datos NoSQL en la nube para almacenar productos y órdenes.
+
+- Context API → Manejo de estado global del carrito de compras.
+
+- CSS modular → Estilos personalizados para los componentes.
+
+- JavaScript moderno (ES6+) → Manejo de estados, promesas, async/await, y destructuring.
+
+## Funcionalidades principales
+
+**Listado de productos**
+
+Se obtienen dinámicamente desde Firebase Firestore mediante la función getProducts().
+Filtro por marca con getProductsByMarca(marca).
+
+**Detalle de producto**
+
+Muestra información completa de un producto usando getProductById(id).
+
+**Carrito de compras (Context API)**
+
+Agregar productos: agregarAlCarrito(item, quantity)
+Eliminar producto: removeItem(id)
+Vaciar carrito: clearCart()
+Contador de items: countCartItems()
+Total a pagar: totalPrice()
+Estado global administrado con createContext y useState.
+
+**Órdenes en Firestore**
+
+Se crean con la función createOrder(orderData) que almacena la compra en la colección orders.
+
+
+## Configuración del entorno
+
+1 - Clonar el repositorio:
+
+- git clone https://github.com/LuisMariaGomez/CODERHOUSE_ReactJS.git
+
+2 - Instalar dependencias:
+
+- npm install
+
+3 - Configurar Firebase:
+
+- Crear un proyecto en Firebase Console.
+
+- Crear una base de datos Firestore.
+
+- Copiar las credenciales del proyecto y pegarlas en firebaseConfig.js.
+
+4 - Correr la aplicación:
+
+- npm run dev
+
+## Conceptos de React aplicados
+
+- Componentes funcionales
+
+- Props y children
+
+- Hooks: useState, useEffect, useContext
+
+- Context API para compartir estado global
+
+- Rutas dinámicas con useParams
+
+- Condicional rendering para manejar estados de carga y errores
+
+- Eventos y manejo de formularios
+
+## Posibles mejoras futuras
+
+- Autenticación con Firebase Auth.
+
+- Filtrado avanzado y búsqueda de productos.
+
+- Persistencia del carrito en localStorage.
+
+- Integración con pasarela de pagos (MercadoPago / Stripe).
+
+- Diseño responsive con Tailwind o Material UI.
+
+## Autor
+
+Luis María Gómez
+
+Proyecto ReactJS — Coderhouse
+
+2025
+
+

@@ -1,10 +1,14 @@
-import { getProductById } from "../../data/mockAPI.js";
+import { getProductById } from "../../data/firebase";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import './ItemDetailContainerCss.css'
+import { useContext } from 'react';
+import { cartContext } from '../../context/cartContext';
+import ItemCount from "../ItemCount/ItemCount";
 function ItemDetailContainer(){
     const {idProducto} = useParams();
     const [producto, setProducto] = useState({});
+    const { agregarAlCarrito } = useContext(cartContext);
 
     useEffect(() => {
         getProductById(idProducto).then((data) => {
@@ -12,8 +16,9 @@ function ItemDetailContainer(){
         });
     }, []);
 
-    console.log(`Id del producto: ${idProducto}`);
-
+    function onAddToCart(quantity) {
+        agregarAlCarrito(producto, quantity);
+    }
     return(
         <div className="itemDetailContainer">
             <img className="itemDetailImage" src={producto.img} alt={producto.nombre}/>
@@ -24,7 +29,12 @@ function ItemDetailContainer(){
                 <h3>Potencia: {producto.potencia}</h3>
                 <p>{producto.descripcion}</p>
                 <h4>Stock disponible: {producto.stock}</h4>
-                <button>Agregar al carrito</button>
+                <ItemCount 
+                    max={producto.stock} 
+                    min={1} 
+                    onAddToCart={onAddToCart} 
+                />
+                {/* <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button> */}
             </div>
         </div>
     )

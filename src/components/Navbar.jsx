@@ -21,7 +21,10 @@ export default function Navbar(){
                 <li><Link className='navLinks' to="/marca/Mathews">MATHEWS</Link></li>
             </ul>
             </nav>
-            <CartWidget/>
+            <Link to='/cart'>
+                <CartWidget/>
+            </Link>
+            
         </header>
                 
     )
