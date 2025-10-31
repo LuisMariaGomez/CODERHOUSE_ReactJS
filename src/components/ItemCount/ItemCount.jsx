@@ -20,7 +20,7 @@ export default function ItemCount( {max, min, onAddToCart} ) {
             <button onClick={handleDecrement}>-</button>
             <span>{count}</span>
             <button onClick={handleIncrement}>+</button>
-            <button onClick={ () => onAddToCart(count)}>Agregar al carrito</button>
+            <button className="agregar_carrito" onClick={ () => onAddToCart(count)}>Agregar al carrito</button>
         </div>
     );
 }

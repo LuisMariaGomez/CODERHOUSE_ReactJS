@@ -8,6 +8,7 @@ import FormCheckout from "../FormCheckout/FormCheckout";
 function CartContainer() {
   const [orderCreated, setOrderCreated] = useState(false);
   const { cartItems, removeItem, clearCart, totalPrice } = useContext(cartContext);
+  const [ continuarCompra, setContinuarCompra ] = useState(false);
 
   async function HandleCheckout(buyerData) {
     try {
@@ -84,15 +85,11 @@ function CartContainer() {
 
       <h4>Total a pagar: ${totalPrice()}</h4>
       <button className="btnVaciar" onClick={clearCart}>Vaciar carrito</button>
+      <button className="btnContinuar" onClick={() => setContinuarCompra(true)}>Continuar compra</button>
 
-      <FormCheckout HandleCheckout={HandleCheckout}/>
-
-      {/* <div className="cartButtons">
-        <button className="btnFinalizar" onClick={HandleCheckout}>Finalizar compra</button>
-        <Link to="/checkout">
-          <button className="btnCheck">CheckOut</button>
-        </Link>
-      </div> */}
+      {continuarCompra && (
+        <FormCheckout HandleCheckout={HandleCheckout}/>
+      )}
     </section>
   );
 }

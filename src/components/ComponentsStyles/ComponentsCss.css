@@ -126,3 +126,13 @@ nav ul{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.agregar_carrito{
+    margin-left: 1rem;
+}
+
+.itemCount{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

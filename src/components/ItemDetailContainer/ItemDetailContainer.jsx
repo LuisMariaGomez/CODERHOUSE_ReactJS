@@ -34,7 +34,6 @@ function ItemDetailContainer(){
                     min={1} 
                     onAddToCart={onAddToCart} 
                 />
-                {/* <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button> */}
             </div>
         </div>
     )
